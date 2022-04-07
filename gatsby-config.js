@@ -77,5 +77,6 @@ module.exports = {
         tailwind: true,
       },
     },
+    `gatsby-plugin-smoothscroll`,
   ],
 }

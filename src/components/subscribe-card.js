@@ -12,7 +12,7 @@ function SubscribeCard() {
         placeholder="example@domain.com"
         className="opacity-70 rounded-lg p-3 text-white bg-subscribe-input-color flex mx-auto mt-6 lg:w-6/12"
       />
-      <button className="bg-secondary-default text-gray-darkest text-sm font-bold rounded-lg flex mx-auto mt-6 py-3.5 px-8">
+      <button className="bg-secondary-default text-gray-darkest text-sm font-bold rounded-lg flex mx-auto mt-6 py-3.5 px-8 hover:bg-btn-hover transition-colors">
         Sign Up
       </button>
     </div>

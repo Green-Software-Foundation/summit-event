@@ -15,7 +15,7 @@ module.exports = {
         "gray-darkest": "#111827",
         "subscribe-card-color": "#0F2436",
         "subscribe-input-color": "#132D43",
-        "footer-bg": "#0F2436",
+        "btn-hover": "#C8EB5D",
       },
       letterSpacing: {
         tightest: "-.075em",

@@ -1,5 +1,5 @@
 import React from "react"
-
+import scrollTo from "gatsby-plugin-smoothscroll"
 import logo from "../assets/logo.svg"
 
 function Header() {
@@ -9,10 +9,17 @@ function Header() {
         <img className="h-54 w-278" src={logo} alt="GSF Global Summit logo" />
       </div>
       <div className="flex items-center justify-center lg:mt-0 mt-6">
-        <button className="text-primary-light text-sm font-bold py-3.5 px-8 mr-4">
+        <a
+          href="https://greensoftware.foundation/"
+          target="_blank"
+          className="text-primary-light text-sm font-bold py-3.5 px-8 mr-4 hover:text-primary-lighter transition-colors"
+        >
           Learn more
-        </button>
-        <button className="bg-secondary-default text-gray-darkest text-sm font-bold py-3.5 px-8 rounded-lg">
+        </a>
+        <button
+          onClick={() => scrollTo("#regional-events")}
+          className="bg-secondary-default text-gray-darkest text-sm font-bold py-3.5 px-8 rounded-lg hover:bg-btn-hover transition-colors"
+        >
           Register
         </button>
       </div>

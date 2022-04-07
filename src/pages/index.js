@@ -142,7 +142,7 @@ const Section4 = () => (
 )
 
 const Section5 = () => (
-  <section className="mt-16">
+  <section className="mt-16" id="regional-events">
     <h1 className="text-secondary-default text-4xl lg:text-5xl font-extrabold mb-8">
       Regional{" "}
       <span className="text-secondary-lightest text-4xl lg:text-5xl font-extrabold">
