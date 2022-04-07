@@ -24,7 +24,7 @@ module.exports = {
         normal: "0",
         wide: ".025em",
         wider: ".05em",
-        widest: ".0.135em",
+        widest: "0.135em",
         semigap: "0.175em",
         gap: "0.43em",
       },
