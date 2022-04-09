@@ -1,30 +1,30 @@
-import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from "react";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import EventCard from "../components/event-card"
-import SubscribeCard from "../components/subscribe-card"
+import EventCard from "../components/event-card";
+import SubscribeCard from "../components/subscribe-card";
 
-import middleImage from "../assets/middleImage.svg"
-import greenGlobal from "../assets/green-global-summit.svg"
-import section3Item1Img from "../assets/section3-item1-img.svg"
-import section3Item2Img from "../assets/section3-item2-img.svg"
-import subscribe from "../assets/subscribe.svg"
-import grass from "../assets/grass.svg"
-import host1 from "../assets/host1.svg"
-import host2 from "../assets/host2.svg"
-import host3 from "../assets/host3.svg"
-import host4 from "../assets/host4.svg"
-import host5 from "../assets/host5.svg"
-import host6 from "../assets/host6.svg"
-import host7 from "../assets/host7.svg"
-import host8 from "../assets/host8.svg"
+import middleImage from "../assets/middleImage.svg";
+import greenGlobal from "../assets/green-global-summit.svg";
+import section3Item1Img from "../assets/section3-item1-img.svg";
+import section3Item2Img from "../assets/section3-item2-img.svg";
+import subscribe from "../assets/subscribe.svg";
+import grass from "../assets/grass.svg";
+import host1 from "../assets/host1.svg";
+import host2 from "../assets/host2.svg";
+import host3 from "../assets/host3.svg";
+import host4 from "../assets/host4.svg";
+import host5 from "../assets/host5.svg";
+import host6 from "../assets/host6.svg";
+import host7 from "../assets/host7.svg";
+import host8 from "../assets/host8.svg";
 
 // Regional Events
-import regionalEventsData from "../regional-events.yaml"
-import closingEventsData from "../closing-events.yaml"
+import regionalEventsData from "../regional-events.yaml";
+import closingEventsData from "../closing-events.yaml";
 
-console.log(regionalEventsData)
+console.log(regionalEventsData);
 const Section1 = () => (
   <section className="lg:mt-0 mt-24">
     <div>
@@ -49,7 +49,7 @@ const Section1 = () => (
       <img src={middleImage} alt="Green Software Foundation" />
     </div>
   </section>
-)
+);
 
 const Section2 = () => (
   <section className="flex-1 text-center lg:flex lg:text-left lg:justify-between lg:mt-48 mt-24">
@@ -74,7 +74,7 @@ const Section2 = () => (
       <img src={greenGlobal} alt="Green Global Summit" />
     </div>
   </section>
-)
+);
 
 const section3Data = [
   {
@@ -89,14 +89,14 @@ const section3Data = [
       "Feel free to sign up for multiple events if they align with your schedule and make sure to register for the Closing Ceremony as well! Gain valuable insight, learn new skills, meet passionate community members, launch or join Green Software Foundation Meetup groups, and share information with your friends and colleagues.",
     img: section3Item2Img,
   },
-]
+];
 
 const Section3 = () => (
   <section className="mt-32 lg:mt-52">
     {section3Data.map((item, i) => {
-      const isEven = i % 2 === 0
-      const [firstWord, ...restWordsArr] = item.title.split(" ")
-      const restWords = restWordsArr.join(" ")
+      const isEven = i % 2 === 0;
+      const [firstWord, ...restWordsArr] = item.title.split(" ");
+      const restWords = restWordsArr.join(" ");
       return (
         <div
           key={item.title}
@@ -121,10 +121,10 @@ const Section3 = () => (
             </p>
           </div>
         </div>
-      )
+      );
     })}
   </section>
-)
+);
 
 const Section4 = () => (
   <section className="flex mt-28 lg:mt-12 justify-center">
@@ -139,7 +139,7 @@ const Section4 = () => (
       </div>
     </div>
   </section>
-)
+);
 
 const Section5 = () => (
   <section className="mt-16" id="regional-events">
@@ -151,7 +151,7 @@ const Section5 = () => (
     </h1>
     {/* Card component */}
     <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
-      {regionalEventsData.map(item => (
+      {regionalEventsData.map((item) => (
         <a
           key={`${item.time} ${item.date}`}
           href={item.eventLink}
@@ -169,7 +169,7 @@ const Section5 = () => (
       ))}
     </div>
   </section>
-)
+);
 
 const Section6 = () => (
   <section className="mt-16 lg:mt-32">
@@ -181,7 +181,7 @@ const Section6 = () => (
     </h1>
     {/* Card component */}
     <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
-      {closingEventsData.map(item => (
+      {closingEventsData.map((item) => (
         <a
           key={`${item.time} ${item.date}`}
           href={item.eventLink}
@@ -199,7 +199,7 @@ const Section6 = () => (
       ))}
     </div>
   </section>
-)
+);
 
 const Section7 = () => (
   <section className="mt-32 lg:mt-52">
@@ -212,7 +212,7 @@ const Section7 = () => (
     </div>
     <SubscribeCard />
   </section>
-)
+);
 
 const hosts = [
   { logo: host1, name: "Accenture" },
@@ -223,7 +223,7 @@ const hosts = [
   { logo: host7, name: "NTT Data" },
   { logo: host5, name: "Shell" },
   { logo: host8, name: "thoughtworks" },
-]
+];
 const Section8 = () => (
   <section className="mt-32 lg:mt-52">
     <h1 className="text-secondary-default text-4xl lg:text-5xl font-extrabold tracking-wide text-center mb-4">
@@ -233,14 +233,14 @@ const Section8 = () => (
       </span>
     </h1>
     <div className="flex justify-center flex-wrap items-center">
-      {hosts.map(host => (
+      {hosts.map((host) => (
         <div key={host.name} className="m-10 opacity-60">
           <img src={host.logo} alt={host.name} />
         </div>
       ))}
     </div>
   </section>
-)
+);
 
 const IndexPage = () => (
   <Layout>
@@ -254,6 +254,6 @@ const IndexPage = () => (
     <Section7 />
     <Section8 />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

@@ -18,6 +18,7 @@ import ITFlag from "../assets/flags/IT.svg"
 import JPFlag from "../assets/flags/JP.svg"
 import SEFlag from "../assets/flags/SE.svg"
 import USFlag from "../assets/flags/US.svg"
+import EUFlag from "../assets/flags/EU.svg"
 
 const countryFlags = {
   AU: AUFlag,
@@ -32,6 +33,7 @@ const countryFlags = {
   JP: JPFlag,
   SE: SEFlag,
   US: USFlag,
+  EU: EUFlag,
 }
 
 function EventCard({ address, country, countryCode, date, time, eventType }) {

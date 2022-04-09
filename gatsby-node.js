@@ -3,5 +3,13 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      fallback: {
+        path: require.resolve("path-browserify"),
+      },
+    },
+  });
+};
 // You can delete this file if you're not using it
