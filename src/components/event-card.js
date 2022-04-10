@@ -54,6 +54,7 @@ function EventCard({ address, country, countryCode, date, time, eventType }) {
           <img
             className="w-9 border-2 rounded-sm drop-shadow-md"
             src={countryFlags[countryCode]}
+            alt={`${countryCode} Flag`}
           ></img>
         </div>
       )}

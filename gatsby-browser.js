@@ -4,5 +4,4 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-import "@fontsource/nunito-sans"
-import './src/styles/globals.css'
+import "./src/styles/globals.css"

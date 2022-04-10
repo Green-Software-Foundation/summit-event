@@ -1,18 +1,18 @@
-import * as React from "react";
-import { useForm } from "react-hook-form";
-import addToMailchimp from "gatsby-plugin-mailchimp";
+import * as React from "react"
+import { useForm } from "react-hook-form"
+import addToMailchimp from "gatsby-plugin-mailchimp"
 
 const SubscribeCard = () => {
-  const [mailchimpResult, setMailchimpResult] = React.useState(null);
+  const [mailchimpResult, setMailchimpResult] = React.useState(null)
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm()
   const onSubmit = async ({ email }) => {
-    const result = await addToMailchimp(email);
-    setMailchimpResult(result);
-  };
+    const result = await addToMailchimp(email)
+    setMailchimpResult(result)
+  }
 
   return (
     <div className="bg-subscribe-card-color p-12 rounded-xl lg:w-9/12 m-auto text-center">
@@ -29,7 +29,7 @@ const SubscribeCard = () => {
           <input
             type="text"
             name="email"
-            className={`opacity-70 rounded-lg p-3 text-white bg-subscribe-input-color flex mx-auto mt-6 lg:w-6/12 mb-2 ${
+            className={`opacity-70 rounded-lg p-3 text-white bg-subscribe-input-color flex mx-auto mt-6 max-w-full w-96 mb-2 ${
               errors.email ? "border-2 border-rose-500" : "border-0"
             }`}
             placeholder="example@domain.com"
@@ -63,7 +63,7 @@ const SubscribeCard = () => {
         </form>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default SubscribeCard;
+export default SubscribeCard

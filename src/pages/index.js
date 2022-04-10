@@ -1,30 +1,32 @@
-import React from "react";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import React from "react"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
-import EventCard from "../components/event-card";
-import SubscribeCard from "../components/subscribe-card";
+import GlobalCard from "../components/global-event-card"
+import EventCard from "../components/event-card"
+import SubscribeCard from "../components/subscribe-card"
 
-import middleImage from "../assets/middleImage.svg";
-import greenGlobal from "../assets/green-global-summit.svg";
-import section3Item1Img from "../assets/section3-item1-img.svg";
-import section3Item2Img from "../assets/section3-item2-img.svg";
-import subscribe from "../assets/subscribe.svg";
-import grass from "../assets/grass.svg";
-import host1 from "../assets/host1.svg";
-import host2 from "../assets/host2.svg";
-import host3 from "../assets/host3.svg";
-import host4 from "../assets/host4.svg";
-import host5 from "../assets/host5.svg";
-import host6 from "../assets/host6.svg";
-import host7 from "../assets/host7.svg";
-import host8 from "../assets/host8.svg";
+import heroImageDesktop from "../assets/heroImageDesktop.svg"
+import heroImageTablet from "../assets/heroImageTablet.svg"
+import heroImageMobile from "../assets/heroImageMobile.svg"
+import greenGlobal from "../assets/green-global-summit.svg"
+import section3Item1Img from "../assets/section3-item1-img.svg"
+import section3Item2Img from "../assets/section3-item2-img.svg"
+import subscribe from "../assets/subscribe.svg"
+import grass from "../assets/grass.svg"
+import host1 from "../assets/host1.svg"
+import host2 from "../assets/host2.svg"
+import host3 from "../assets/host3.svg"
+import host4 from "../assets/host4.svg"
+import host5 from "../assets/host5.svg"
+import host6 from "../assets/host6.svg"
+import host7 from "../assets/host7.svg"
+import host8 from "../assets/host8.svg"
 
 // Regional Events
-import regionalEventsData from "../regional-events.yaml";
-import closingEventsData from "../closing-events.yaml";
+import regionalEventsData from "../regional-events.yaml"
+import closingEventsData from "../closing-events.yaml"
 
-console.log(regionalEventsData);
 const Section1 = () => (
   <section className="lg:mt-0 mt-24">
     <div>
@@ -45,36 +47,46 @@ const Section1 = () => (
       </h1>
     </div>
 
-    <div className="-mt-72 hidden xl:block">
-      <img src={middleImage} alt="Green Software Foundation" />
+    <div className="-mt-72 hidden lg:block">
+      <img src={heroImageDesktop} alt="Green Software Foundation" />
+    </div>
+    <div className=" hidden md:block lg:hidden">
+      <img
+        className="mx-auto"
+        src={heroImageTablet}
+        alt="Green Software Foundation"
+      />
+    </div>
+    <div className="block md:hidden">
+      <img
+        className="mx-auto w-full"
+        src={heroImageMobile}
+        alt="Green Software Foundation"
+      />
     </div>
   </section>
-);
+)
 
 const Section2 = () => (
-  <section className="flex-1 text-center lg:flex lg:text-left lg:justify-between lg:mt-48 mt-24">
-    <div className="lg:w-7/12">
-      <p className="font-extrabold text-5xl lg:text-8xl text-secondary-default">
-        Green
+  <section className="flex-1 text-center md:flex md:text-left md:justify-between md:items-center md:mt-48 mt-24">
+    <div className="md:w-7/12">
+      <p className="font-extrabold text-5xl md:text-6xl lg:text-8xl text-secondary-default">
+        Green <br></br>
+        <span className="text-secondary-lightest">Global Summit</span>
       </p>
-      <p className="font-extrabold text-5xl lg:text-8xl text-secondary-lightest">
-        {" "}
-        Global <br />
-        Summit
-      </p>
-      <p className="text-lg lg:text-xl text-primary-light mt-8">
+      <p className="text-lg lg:text-xl text-primary-light mt-8 md:mr-4 max-w-md mx-auto lg:max-w-none lg:mx-0">
         The Green Software Foundation Global Summit 2022 is a series of free
         events organized by Green Software Foundation members all around the
         globe that are passionate about sustainable software development,
-        maintenance, and improvement.{" "}
+        maintenance, and improvement.
       </p>
     </div>
 
-    <div className="w-7/12 m-auto lg:w-12/12 mt-10 lg:mt-0 lg:ml-16">
+    <div className="w-7/12 m-auto lg:w-12/12 mt-10 lg:mt-0 lg:ml-16 hidden md:block">
       <img src={greenGlobal} alt="Green Global Summit" />
     </div>
   </section>
-);
+)
 
 const section3Data = [
   {
@@ -89,42 +101,46 @@ const section3Data = [
       "Feel free to sign up for multiple events if they align with your schedule and make sure to register for the Closing Ceremony as well! Gain valuable insight, learn new skills, meet passionate community members, launch or join Green Software Foundation Meetup groups, and share information with your friends and colleagues.",
     img: section3Item2Img,
   },
-];
+]
 
 const Section3 = () => (
-  <section className="mt-32 lg:mt-52">
+  <section className="mt-32 lg:mt-52 ">
     {section3Data.map((item, i) => {
-      const isEven = i % 2 === 0;
-      const [firstWord, ...restWordsArr] = item.title.split(" ");
-      const restWords = restWordsArr.join(" ");
+      const isEven = i % 2 === 0
+      const [firstWord, ...restWordsArr] = item.title.split(" ")
+      const restWords = restWordsArr.join(" ")
       return (
         <div
           key={item.title}
-          className={`items-center lg:text-left lg:flex lg:justify-between ${
+          className={` items-center lg:text-left lg:flex lg:justify-between ${
             i === section3Data.length - 1 ? "" : "mb-24 lg:mb-44"
           }`}
         >
           <div className={`${isEven ? "order-1" : "order-2"}`}>
             <img
-              className="mt-4 lg:mt-0 w-7/12 mx-auto lg:mx-0 lg:w-full lg:max-w-none"
+              className="mt-4 lg:mt-0 w-7/12 mx-auto max-h-72 lg:max-h-full lg:mx-0 lg:w-full lg:max-w-none"
               src={item.img}
               alt={item.title}
             />
           </div>
-          <div className={`${isEven ? "order-2" : "order-1"} lg:w-5/12`}>
+          <div
+            className={`${
+              isEven ? "order-2" : "order-1"
+            } lg:w-5/12 text-center lg:text-left`}
+          >
             <h1 className="text-secondary-lightest font-extrabold text-4xl lg:text-6xl mt-6 lg:mt-0">
               <span className="text-secondary-default">{firstWord}</span>{" "}
               {restWords}
             </h1>
-            <p className="text-primary-light text-base lg:text-xl mt-8 lg:mt-12">
+            <p className="text-primary-light text-base lg:text-xl mt-8 lg:mt-12 max-w-md mx-auto lg:max-w-none lg:mx-0">
               {item.description}
             </p>
           </div>
         </div>
-      );
+      )
     })}
   </section>
-);
+)
 
 const Section4 = () => (
   <section className="flex mt-28 lg:mt-12 justify-center">
@@ -139,10 +155,34 @@ const Section4 = () => (
       </div>
     </div>
   </section>
-);
+)
 
 const Section5 = () => (
-  <section className="mt-16" id="regional-events">
+  <section className="mt-16 lg:mt-32" id="events">
+    <h1 className="text-secondary-default text-4xl lg:text-5xl font-extrabold mb-8">
+      Global{" "}
+      <span className="text-secondary-lightest text-4xl lg:text-5xl font-extrabold">
+        Events
+      </span>
+    </h1>
+    {/* Card component */}
+    <div className="grid gap-6 grid-cols-2">
+      {closingEventsData.map(item => (
+        <a
+          key={`${item.time} ${item.date}`}
+          href={item.eventLink}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <GlobalCard date={item.date} time={item.time} />
+        </a>
+      ))}
+    </div>
+  </section>
+)
+
+const Section6 = () => (
+  <section className="mt-16">
     <h1 className="text-secondary-default text-4xl lg:text-5xl font-extrabold mb-8">
       Regional{" "}
       <span className="text-secondary-lightest text-4xl lg:text-5xl font-extrabold">
@@ -150,12 +190,13 @@ const Section5 = () => (
       </span>
     </h1>
     {/* Card component */}
-    <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
-      {regionalEventsData.map((item) => (
+    <div className="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      {regionalEventsData.map(item => (
         <a
           key={`${item.time} ${item.date}`}
           href={item.eventLink}
           target="_blank"
+          rel="noreferrer"
         >
           <EventCard
             address={item.address}
@@ -169,50 +210,20 @@ const Section5 = () => (
       ))}
     </div>
   </section>
-);
-
-const Section6 = () => (
-  <section className="mt-16 lg:mt-32">
-    <h1 className="text-secondary-default text-4xl lg:text-5xl font-extrabold mb-8">
-      Closing{" "}
-      <span className="text-secondary-lightest text-4xl lg:text-5xl font-extrabold">
-        Events
-      </span>
-    </h1>
-    {/* Card component */}
-    <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
-      {closingEventsData.map((item) => (
-        <a
-          key={`${item.time} ${item.date}`}
-          href={item.eventLink}
-          target="_blank"
-        >
-          <EventCard
-            address={item.address}
-            country={item.country}
-            countryCode={item.countryCode}
-            date={item.date}
-            time={item.time}
-            eventType={item.eventType}
-          />
-        </a>
-      ))}
-    </div>
-  </section>
-);
+)
 
 const Section7 = () => (
   <section className="mt-32 lg:mt-52">
-    <div className="flex justify-center lg:justify-between lg:flex-none lg:relative">
+    <div className="flex justify-center md:justify-between md:flex-none md:relative">
       <img
-        className="lg:absolute lg:bottom-full lg:top-full hidden lg:block"
+        className="md:absolute lg:bottom-full lg:top-full hidden md:block md:w-52 lg:w-64 md:top-16"
         src={subscribe}
         alt="Subscribe"
       />
     </div>
     <SubscribeCard />
   </section>
-);
+)
 
 const hosts = [
   { logo: host1, name: "Accenture" },
@@ -223,7 +234,7 @@ const hosts = [
   { logo: host7, name: "NTT Data" },
   { logo: host5, name: "Shell" },
   { logo: host8, name: "thoughtworks" },
-];
+]
 const Section8 = () => (
   <section className="mt-32 lg:mt-52">
     <h1 className="text-secondary-default text-4xl lg:text-5xl font-extrabold tracking-wide text-center mb-4">
@@ -233,18 +244,18 @@ const Section8 = () => (
       </span>
     </h1>
     <div className="flex justify-center flex-wrap items-center">
-      {hosts.map((host) => (
+      {hosts.map(host => (
         <div key={host.name} className="m-10 opacity-60">
           <img src={host.logo} alt={host.name} />
         </div>
       ))}
     </div>
   </section>
-);
+)
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <Seo title="Home" />
     <Section1 />
     <Section2 />
     <Section3 />
@@ -254,6 +265,6 @@ const IndexPage = () => (
     <Section7 />
     <Section8 />
   </Layout>
-);
+)
 
-export default IndexPage;
+export default IndexPage
