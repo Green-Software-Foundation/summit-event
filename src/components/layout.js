@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="bg-primary-darkest">
-      <div className="max-w-5xl mx-auto px-4 lg:px-0">
+      <div className="max-w-5xl mx-auto px-4 xl:px-0">
         <Header siteTitle={data.site.siteMetadata.title} />
 
         <main>{children}</main>
