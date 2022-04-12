@@ -257,7 +257,7 @@ const Section8 = () => (
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo />
     <Section1 />
     <Section2 />
     <Section3 />
