@@ -8,7 +8,7 @@ function EventCard({ date, time }) {
         <span className="text-secondary-default mr-2">
           <Virtual />
         </span>
-        <p class="my-6 text-base font-normal text-white text-center">
+        <p className="my-6 text-base font-normal text-white text-center">
           Virtual event
         </p>
       </div>

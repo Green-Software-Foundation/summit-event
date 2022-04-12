@@ -191,23 +191,25 @@ const Section6 = () => (
     </h1>
     {/* Card component */}
     <div className="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      {regionalEventsData.map(item => (
-        <a
-          key={`${item.time} ${item.date}`}
-          href={item.eventLink}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <EventCard
-            address={item.address}
-            country={item.country}
-            countryCode={item.countryCode}
-            date={item.date}
-            time={item.time}
-            eventType={item.eventType}
-          />
-        </a>
-      ))}
+      {regionalEventsData
+        .sort((a, b) => new Date(a.date) - new Date(b.date))
+        .map(item => (
+          <a
+            key={`${item.time} ${item.date}`}
+            href={item.eventLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <EventCard
+              address={item.address}
+              country={item.country}
+              countryCode={item.countryCode}
+              date={item.date}
+              time={item.time}
+              eventType={item.eventType}
+            />
+          </a>
+        ))}
     </div>
   </section>
 )
