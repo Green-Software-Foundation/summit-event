@@ -3,7 +3,6 @@ module.exports = {
     title: `Green Software Summit 2022`,
     description: `The GSF Global Summit 2022 is a series of free events all around the globe where people talk about how to build software that emits fewer carbon emissions`,
     author: "@gsfcommunity",
-    image: `${__dirname}/src/images/global-summit-banner.png`,
   },
   flags: {
     THE_FLAG: false,

@@ -19,10 +19,9 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
-            image
           }
         }
-        file(relativePath: { eq: "global-summit-banner.png" }) {
+        file(relativePath: { eq: "global-summit-banner.jpg" }) {
           childImageSharp {
             original {
               src
@@ -41,7 +40,7 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={defaultTitle}
       titleTemplate={defaultTitle}
       meta={[
         {
@@ -50,7 +49,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: defaultTitle,
         },
         {
           property: `og:description`,
@@ -70,7 +69,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: defaultTitle,
         },
         {
           name: `twitter:description`,
