@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `GSF Global Summit 2022`,
-    description: `The Green Software Foundation Global Summit 2022 is a series of free events organized by Green Software Foundation members all around the globe that are passionate about sustainable software development, maintenance, and improvement.`,
+    title: `Green Software Summit 2022`,
+    description: `The GSF Global Summit 2022 is a series of free events all around the globe where people talk about how to build software that emits fewer carbon emissions`,
     author: "@gsfcommunity",
-    image: "/src/images/global-summit-banner.png",
+    image: `${__dirname}/src/images/global-summit-banner.png`,
   },
   flags: {
     THE_FLAG: false,
