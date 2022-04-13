@@ -38,7 +38,7 @@ const countryFlags = {
 
 function EventCard({ address, country, countryCode, date, time, eventType }) {
   return (
-    <div className="flex flex-col items-center max-w-sm bg-primary-dark rounded-lg hover:-translate-y-2 transition-transform group">
+    <div className="flex flex-col items-center w-full sm:max-w-sm bg-primary-dark rounded-lg hover:-translate-y-2 transition-transform group">
       <div className="py-4 px-4 mb-2 text-xs font-bold text-white bg-primary-default w-full rounded-t-lg flex justify-between">
         <div className="flex items-center">
           <Calendar />
