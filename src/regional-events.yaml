@@ -150,3 +150,5 @@
   countryCode: "AU"
   date: "June 15"
   time: "8:00 AM AET"
+  eventType: "In-person"
+  eventLink: "https://www.meetup.com/gsf-sydney/events/284807732/"
