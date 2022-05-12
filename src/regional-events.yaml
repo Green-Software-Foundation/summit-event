@@ -125,6 +125,7 @@
   eventType: "Hybrid"
   eventLink: "https://www.meetup.com/gsf-redmond/events/284807719/"
 - address: "Houston"
+  day: 1
   country: "US"
   countryCode: "US"
   date: "June 15"
@@ -132,6 +133,7 @@
   eventType: "Hybrid"
   eventLink: "https://www.meetup.com/gsf-houston/events/284808382/"
 - address: "Houston"
+  day: 2
   country: "US"
   countryCode: "US"
   date: "June 16"

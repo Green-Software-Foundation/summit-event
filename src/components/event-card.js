@@ -36,7 +36,15 @@ const countryFlags = {
   EU: EUFlag,
 }
 
-function EventCard({ address, country, countryCode, date, time, eventType }) {
+function EventCard({
+  address,
+  country,
+  countryCode,
+  date,
+  time,
+  eventType,
+  day,
+}) {
   return (
     <div className="flex flex-col items-center w-full sm:max-w-sm bg-primary-dark rounded-lg hover:-translate-y-2 transition-transform group">
       <div className="py-4 px-4 mb-2 text-xs font-bold text-white bg-primary-default w-full rounded-t-lg flex justify-between">
@@ -60,9 +68,10 @@ function EventCard({ address, country, countryCode, date, time, eventType }) {
       )}
       {address && (
         <h5 className="text-lg font-extrabold text-secondary-default text-center">
-          {address}
+          {address} {day && <small>(Day {day})</small>}
         </h5>
       )}
+
       {country && (
         <h5 className="text-base font-extrabold text-white text-center">
           {country}

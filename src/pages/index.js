@@ -162,7 +162,7 @@ const Section5 = () => (
     <h1 className="text-secondary-default text-4xl lg:text-5xl font-extrabold mb-8">
       Global{" "}
       <span className="text-secondary-lightest text-4xl lg:text-5xl font-extrabold">
-        Events
+        Closing Ceremonies
       </span>
     </h1>
     {/* Card component */}
@@ -207,6 +207,7 @@ const Section6 = () => (
               date={item.date}
               time={item.time}
               eventType={item.eventType}
+              day={item.day}
             />
           </a>
         ))}
