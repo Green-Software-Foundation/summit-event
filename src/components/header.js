@@ -2,9 +2,13 @@ import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import logo from "../assets/logo.svg"
 
-function Header() {
+function Header({ isLive }) {
   return (
-    <nav className="md:flex md:flex-wrap md:items-center md:justify-between lg:py-16 lg:mb-40">
+    <nav
+      className={`md:flex md:flex-wrap md:items-center md:justify-between lg:py-16 ${
+        isLive ? "lg:mb-0" : "lg:mb-40"
+      }`}
+    >
       <div className="h-300 w-300 flex items-center justify-center lg:pt-0 pt-10">
         <img className="h-54 w-278" src={logo} alt="GSF Global Summit logo" />
       </div>

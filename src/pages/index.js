@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -215,8 +215,8 @@ const Section6 = () => (
   </section>
 )
 
-const Section7 = () => (
-  <section className="mt-32 lg:mt-52">
+const Section7 = ({ isLive }) => (
+  <section className={`${isLive ? "mt-16" : "mt-32 lg:mt-52"} `}>
     <div className="flex justify-center md:justify-between md:flex-none md:relative">
       <img
         className="md:absolute lg:bottom-full lg:top-full hidden md:block md:w-52 lg:w-64 md:top-16"
@@ -255,19 +255,79 @@ const Section8 = () => (
     </div>
   </section>
 )
+const Stream = ({ youtubeVideoId }) => {
+  return (
+    <div>
+      <iframe
+        width="100%"
+        height="560"
+        src={`https://www.youtube.com/embed/${youtubeVideoId}`}
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  )
+}
+const IndexPage = () => {
+  const [isLive, setIsLive] = React.useState(false)
+  const [youtubeVideoId, setYoutubeVideoId] = React.useState(null)
+  useEffect(() => {
+    fetch(
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCyd5o9d2Wo7lqPLshfZz4_A&event_type=live&type=video&key=AIzaSyCFbacdgOewXkg3_-3eD2ATUxmKBdU6Ml8`,
+      {
+        headers: {
+          Accept: "application/json",
+        },
+      }
+    )
+      .then(async res => {
+        const response = await res.json()
 
-const IndexPage = () => (
-  <Layout>
-    <Seo />
-    <Section1 />
-    <Section2 />
-    <Section3 />
-    <Section4 />
-    <Section5 />
-    <Section6 />
-    <Section7 />
-    <Section8 />
-  </Layout>
-)
+        if (response.items && response.items.length > 0) {
+          const streamInfo = response.items[0]
+          setIsLive(true)
+          setYoutubeVideoId(streamInfo.id.videoId)
+          console.log("youtubeVideoId - old", streamInfo.id.videoId)
+        }
+      })
+      .catch(err => {
+        console.log("Error fetching data from YouTube API: ", err)
+      })
+  }, [])
+  return (
+    <Layout isLive={isLive}>
+      <Seo />
+      {isLive ? (
+        <>
+          <Stream
+            youtubeVideoId={
+              youtubeVideoId || "https://www.youtube.com/embed/p7fPOP511K8"
+            }
+          />
+          <Section7 isLive={isLive} />
+          <Section2 />
+          <Section3 />
+          <Section4 />
+          <Section5 />
+          <Section6 />
+          <Section8 />
+        </>
+      ) : (
+        <>
+          <Section1 />
+          <Section2 />
+          <Section3 />
+          <Section4 />
+          <Section5 />
+          <Section6 />
+          <Section7 />
+          <Section8 />
+        </>
+      )}
+    </Layout>
+  )
+}
 
 export default IndexPage

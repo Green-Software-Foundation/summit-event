@@ -5,7 +5,7 @@ import "../styles/globals.css"
 import Header from "./header"
 import footerLogo from "../assets/footer-logo.svg"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isLive }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   return (
     <div className="bg-primary-darkest">
       <div className="max-w-5xl mx-auto px-4 xl:px-0">
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title} isLive={isLive} />
 
         <main>{children}</main>
         <footer>
