@@ -6,36 +6,36 @@ import {
   Calendar,
   Time,
 } from "../resources/icons.js"
-import AUFlag from "../assets/flags/AU.svg"
-import DEFlag from "../assets/flags/DE.svg"
-import DKFlag from "../assets/flags/DK.svg"
-import ESFlag from "../assets/flags/ES.svg"
-import FRFlag from "../assets/flags/FR.svg"
-import GBFlag from "../assets/flags/GB.svg"
-import ILFlag from "../assets/flags/IL.svg"
-import INFlag from "../assets/flags/IN.svg"
-import ITFlag from "../assets/flags/IT.svg"
-import JPFlag from "../assets/flags/JP.svg"
-import SEFlag from "../assets/flags/SE.svg"
-import USFlag from "../assets/flags/US.svg"
-import EUFlag from "../assets/flags/EU.svg"
-import CNFlag from "../assets/flags/CN.svg"
+import AUFlag from "../assets/flags/AU.inline.svg"
+import DEFlag from "../assets/flags/DE.inline.svg"
+import DKFlag from "../assets/flags/DK.inline.svg"
+import ESFlag from "../assets/flags/ES.inline.svg"
+import FRFlag from "../assets/flags/FR.inline.svg"
+import GBFlag from "../assets/flags/GB.inline.svg"
+import ILFlag from "../assets/flags/IL.inline.svg"
+import INFlag from "../assets/flags/IN.inline.svg"
+import ITFlag from "../assets/flags/IT.inline.svg"
+import JPFlag from "../assets/flags/JP.inline.svg"
+import SEFlag from "../assets/flags/SE.inline.svg"
+import USFlag from "../assets/flags/US.inline.svg"
+import EUFlag from "../assets/flags/EU.inline.svg"
+import CNFlag from "../assets/flags/CN.inline.svg"
 
 const countryFlags = {
-  AU: AUFlag,
-  DE: DEFlag,
-  DK: DKFlag,
-  ES: ESFlag,
-  FR: FRFlag,
-  GB: GBFlag,
-  IL: ILFlag,
-  IN: INFlag,
-  IT: ITFlag,
-  JP: JPFlag,
-  SE: SEFlag,
-  US: USFlag,
-  EU: EUFlag,
-  CN: CNFlag,
+  AU: <AUFlag />,
+  DE: <DEFlag />,
+  DK: <DKFlag />,
+  ES: <ESFlag />,
+  FR: <FRFlag />,
+  GB: <GBFlag />,
+  IL: <ILFlag />,
+  IN: <INFlag />,
+  IT: <ITFlag />,
+  JP: <JPFlag />,
+  SE: <SEFlag />,
+  US: <USFlag />,
+  EU: <EUFlag />,
+  CN: <CNFlag />,
 }
 
 function EventCard({
@@ -61,11 +61,9 @@ function EventCard({
       </div>
       {countryCode && (
         <div className="mt-6 mb-3">
-          <img
-            className="w-9 border-2 rounded-sm drop-shadow-md"
-            src={countryFlags[countryCode]}
-            alt={`${countryCode} Flag`}
-          ></img>
+          <div className="w-9 border-2 rounded-sm drop-shadow-md flag-wrapper">
+            {countryFlags[countryCode]}
+          </div>
         </div>
       )}
       {address && (

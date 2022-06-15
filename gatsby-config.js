@@ -92,5 +92,13 @@ module.exports = {
         trackingIds: ["G-8YTE81GCBM"],
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
   ],
 }
