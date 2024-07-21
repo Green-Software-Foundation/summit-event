@@ -9,207 +9,174 @@ import closingEventsData from "../data/closing-events.json";
 import EventCard from "../components/event-card.astro";
 import SubscribeCard from "../components/subscribe-card.astro";
 
-const infoSectionData = [
-  {
-    title: "Event for Everybody",
-    description:
-      "No matter your location, time zone, Green Software Foundation membership status, or level of sustainable expertise, all are welcome to join. Regional events will be held between June 6 – 17, 2022 with in-person and online venues all around the globe. The closing ceremonies will bring all of us together in a virtual setting to celebrate this year’s Green Software Foundation Global Summit.",
-    img: "/images/info-section-illustration-1.svg",
-  },
-  {
-    title: "Join Us",
-    description:
-      "Feel free to sign up for multiple events if they align with your schedule and make sure to register for the Closing Ceremony as well! Gain valuable insight, learn new skills, meet passionate community members, launch or join Green Software Foundation Meetup groups, and share information with your friends and colleagues.",
-    img: "/images/info-section-illustration-2.svg",
-  },
-];
-
 const hosts = [
   { logo: "/hosts/accenture.svg", name: "Accenture" },
-  { logo: "/hosts/avanade.svg", name: "Avanade" },
-  { logo: "/hosts/bcg.svg", name: "BCG" },
-  { logo: "/hosts/goldman-sachs.svg",
-    name: "Goldman Sachs" },
-  { logo: "/hosts/microsoft.svg", name: "Microsoft" },
+  { logo: "/hosts/bcg.svg", name: "BCG X" },
+  { logo: "/hosts/ubs.svg", name: "UBS" },
   { logo: "/hosts/ntt-data.svg", name: "NTT Data" },
-  { logo: "/hosts/shell.svg", name: "Shell" },
-  { logo: "/hosts/thoughtworks.svg", name: "thoughtworks" },
-]
+  { logo: "/hosts/microsoft.svg", name: "Microsoft" },
+  { logo: "/hosts/intel.svg", name: "Intel" },
+  { logo: "/hosts/thoughtworks.svg", name: "Thoughtworks" },
+  { logo: "/hosts/mastercard.svg", name: "Mastercard" },
+  { logo: "/hosts/cast.svg", name: "CAST" },
+  { logo: "/hosts/iim-mumbai.png", name: "IIM Mumbai", class: "w-24" },
+  { logo: "/hosts/imda.svg", name: "IMDA" },
+  { logo: "/hosts/globant.svg", name: "Globant" },
+];
 ---
 
 <Layout>
-  <section class="lg:mt-0 mt-24">
-    <div>
-      <h1
-        class="text-xl md:text-2xl font-semibold text-secondary-lightest tracking-widest text-center mb-6"
-      >
-        Green Software Foundation
-      </h1>
-    </div>
-
-    <div>
-      <h1
-        class="text-4xl md:text-6xl font-extrabold text-secondary-lightest tracking-semigap text-center uppercase mb-6"
-      >
-        Global Summit
-      </h1>
-    </div>
-
-    <div>
-      <h1
-        class="text-2xl md:text-3xl font-semibold text-secondary-default tracking-gap text-center uppercase"
-      >
-        June 2022
-      </h1>
-    </div>
-
-    <div class="-mt-72 hidden lg:block">
-      <img src="/images/heroImageDesktop.svg" alt="Green Software Foundation" />
-    </div>
-    <div class="hidden md:block lg:hidden">
-      <img
-        class="mx-auto"
-        src="/images/heroImageTablet.svg"
-        alt="Green Software Foundation"
-      />
-    </div>
-    <div class="block md:hidden">
-      <img
-        class="mx-auto w-full"
-        src="/images/heroImageMobile.svg"
-        alt="Green Software Foundation"
-      />
-    </div>
-  </section>
-  <section
-    class="flex-1 text-center md:flex md:text-left md:justify-between md:items-center md:mt-48 mt-24"
-  >
-    <div class="md:w-7/12">
-      <p
-        class="font-extrabold text-5xl md:text-6xl lg:text-8xl text-secondary-default"
-      >
-        Green
-        <span class="text-secondary-lightest">Global Summit</span>
-      </p>
-      <p
-        class="text-lg lg:text-xl text-primary-light mt-8 md:mr-4 max-w-md mx-auto lg:max-w-none lg:mx-0"
-      >
-        The Green Software Foundation Global Summit 2022 is a series of free
-        events organized by Green Software Foundation members all around the
-        globe that are passionate about sustainable software development,
-        maintenance, and improvement.
-      </p>
-    </div>
-
+  <section class="py-12 md:py-16">
     <div
-      class="w-7/12 m-auto lg:w-12/12 mt-10 lg:mt-0 lg:ml-16 hidden md:block"
+      class="grid grid-cols-1 gap-x-20 gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:items-center"
     >
-      <img src="/images/green-global-summit.svg" alt="Green Global Summit" />
+      <div>
+        <h1
+          class="mb-2 text-xl md:text-3xl font-bold md:mb-6 text-secondary-lightest"
+        >
+          Join the Green Software Foundation <span
+            class="text-secondary-default"
+          >
+            Global Summit 2024!</span
+          >
+        </h1>
+        <p class="md:text-md text-primary-light">
+          a series of in-person events held from <strong>
+            October 1-10 2024</strong
+          >, organised by GSF members in partnership with the GSF to captivate,
+          motivate, and foster connections among software practitioners and key
+          stakeholders. This global summit celebrates sustainable software
+          development, maintenance, and improvement.
+        </p>
+        <div class="mt-6 flex gap-x-4 md:mt-8">
+          <a href="#events" class="flex gap-2 text-secondary-default"
+            >Discover regional events
+            <Icon class="w-6 h-auto" name="lucide:arrow-down" />
+          </a>
+        </div>
+      </div>
+      <div>
+        <img
+          src="/images/hero-image.svg"
+          class="w-full object-cover"
+          alt="Placeholder image"
+        />
+      </div>
     </div>
   </section>
-  <section class="mt-32 lg:mt-52">
-    {
-      infoSectionData.map((item, i) => {
-        const isEven = i % 2 === 0;
-        const [firstWord, ...restWordsArr] = item.title.split(" ");
-        const restWords = restWordsArr.join(" ");
-        return (
-          <div
-            class={` items-center lg:text-left lg:flex lg:justify-between ${
-              i === infoSectionData.length - 1 ? "" : "mb-24 lg:mb-44"
-            }`}
-          >
-            <div class={`${isEven ? "order-1" : "order-2"}`}>
-              <img
-                class="mt-4 lg:mt-0 w-7/12 mx-auto max-h-72 lg:max-h-full lg:mx-0 lg:w-full lg:max-w-none"
-                src={item.img}
-                alt={item.title}
+  <section class="py-12 md:py-16" id="events">
+    <div class="mb-8">
+      <h1
+        class="text-secondary-default text-xl md:text-3xl font-extrabold mb-2"
+      >
+        Regional{" "}
+        <span class="text-secondary-lightest font-extrabold"> Events </span>
+      </h1>
+      <p class="md:text-md text-primary-light">
+        Find an event in your city below and be part of this global movement
+        towards greener software!
+      </p>
+    </div>
+    {/* Card component */}
+    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      {
+        regionalEventsData
+          .sort(
+            (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+          )
+          .map((item) => (
+            <a href={item.eventLink} target="_blank" rel="noreferrer">
+              <EventCard
+                address={item.address}
+                country={item.country}
+                countryCode={item.countryCode}
+                date={item.date}
+                time={item.time}
+                organizers={item.organizers}
               />
-            </div>
-            <div
-              class={`${
-                isEven ? "order-2" : "order-1"
-              } lg:w-5/12 text-center lg:text-left`}
-            >
-              <h1 class="text-secondary-lightest font-extrabold text-4xl lg:text-6xl mt-6 lg:mt-0">
-                <span class="text-secondary-default">{firstWord}</span>{" "}
-                {restWords}
-              </h1>
-              <p class="text-primary-light text-base lg:text-xl mt-8 lg:mt-12 max-w-md mx-auto lg:max-w-none lg:mx-0">
-                {item.description}
-              </p>
-            </div>
-          </div>
-        );
-      })
-    }
+            </a>
+          ))
+      }
+    </div>
   </section>
-  <section class="flex mt-28 lg:mt-12 justify-center">
-    <div>
-      <div>
-        <Icon class="mx-auto w-36 h-auto" name="grass" />
+  <section class="py-12 md:py-16 flex flex-col gap-8">
+    <div
+      class="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20 items-center"
+    >
+      <div class="order-2 md:order-2">
+        <h2
+          class="mb-2 text-xl md:text-3xl font-bold md:mb-6 text-secondary-lightest"
+        >
+          Sustainable Software <span class="text-secondary-default"
+            >Expertise and Skills</span
+          >
+        </h2>
+        <p class="text-primary-light">
+          Gain valuable insights from experts in the field of sustainable
+          software, develop new skills through workshops and training sessions,
+          and connect with passionate members of the green software community.
+        </p>
       </div>
-      <div class="m-8">
-        <p class="text-2xl text-primary-light text-center font-bold">
-          Join one or more of the following events below!
+      <div class="flex items-center justify-center order-1 md:order-2">
+        <img
+          src="/images/info-section-illustration-1.svg"
+          class="w-full object-cover max-w-xs"
+          alt="Placeholder image"
+        />
+      </div>
+    </div>
+    <div
+      class="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20 items-center"
+    >
+      <div class="flex items-center justify-center">
+        <img
+          src="/images/info-section-illustration-2.svg"
+          class="w-full object-cover max-w-xs"
+          alt="Placeholder image"
+        />
+      </div>
+      <div>
+        <h2
+          class="mb-2 text-xl md:text-3xl font-bold md:mb-6 text-secondary-lightest"
+        >
+          Elevate Culture and Accelerate <span class="text-secondary-default"
+            >Green Software Adoption</span
+          >
+        </h2>
+        <p class="text-primary-light">
+          Share knowledge and exchange information with peers and colleagues to
+          elevate culture, amplify knowledge-sharing, and accelerate the
+          adoption of green software principles, patterns, and tools
         </p>
       </div>
     </div>
   </section>
-  <section class="mt-16 lg:mt-32" id="events">
-    <h1 class="text-secondary-default text-4xl lg:text-5xl font-extrabold mb-8">
-      Global{" "}
-      <span class="text-secondary-lightest text-4xl lg:text-5xl font-extrabold">
-        Closing Ceremonies
-      </span>
-    </h1>
-    {/* Card component */}
-    <div class="grid gap-6 grid-cols-2">
-      {
-        closingEventsData.map((item) => (
-          <a
-            href={item.eventLink}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <GlobalCard date={item.date} time={item.time} />
-          </a>
-        ))
-      }
-    </div>
-  </section>
-  <section class="mt-16">
-    <h1 class="text-secondary-default text-4xl lg:text-5xl font-extrabold mb-8">
-      Regional{" "}
-      <span class="text-secondary-lightest text-4xl lg:text-5xl font-extrabold">
-        Events
-      </span>
-    </h1>
-    {/* Card component */}
-    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      {regionalEventsData
-        .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
-        .map(item => (
-          <a
-            href={item.eventLink}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <EventCard
-              address={item.address}
-              country={item.country}
-              countryCode={item.countryCode}
-              date={item.date}
-              time={item.time}
-              eventType={item.eventType}
-              day={item.day}
-            />
-          </a>
-        ))}
-    </div>
-  </section>
-  <section class="mt-32 lg:mt-52">
-    <div class="flex justify-center md:justify-between md:flex-none md:relative">
+
+  {
+    closingEventsData.length > 0 && (
+      <section class="mt-16 lg:mt-32" id="events">
+        <h1 class="text-secondary-default text-4xl lg:text-5xl font-extrabold mb-8">
+          Global{" "}
+          <span class="text-secondary-lightest text-4xl lg:text-5xl font-extrabold">
+            Closing Ceremonies
+          </span>
+        </h1>
+        {/* Card component */}
+        <div class="grid gap-6 grid-cols-2">
+          {closingEventsData.map((item) => (
+            <a href={item.eventLink} target="_blank" rel="noreferrer">
+              <GlobalCard date={item.date} time={item.time} />
+            </a>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <section class="py-12 md:py-16">
+    <div
+      class="flex justify-center md:justify-between md:flex-none md:relative"
+    >
       <img
         class="md:absolute lg:bottom-full lg:top-full hidden md:block md:w-52 lg:w-64 md:top-16"
         src="/images/subscribe.svg"
@@ -218,19 +185,25 @@ const hosts = [
     </div>
     <SubscribeCard />
   </section>
-  <section class="mt-32 lg:mt-52">
-    <h1 class="text-secondary-default text-4xl lg:text-5xl font-extrabold tracking-wide text-center mb-4">
+  <section class="py-12 md:py-16">
+    <h1
+      class="mb-2 text-xl md:text-3xl font-bold md:mb-6 text-secondary-lightest text-center"
+    >
       Thanks{" "}
-      <span class="text-secondary-lightest text-4xl lg:text-5xl font-extrabold tracking-wide">
-        to our hosts
-      </span>
+      <span class="text-secondary-default"> to our hosts </span>
     </h1>
     <div class="flex justify-center flex-wrap items-center">
-      {hosts.map(host => (
-        <div class="m-10 opacity-60">
-          <img src={host.logo} alt={host.name} />
-        </div>
-      ))}
+      {
+        hosts.map((host) => (
+          <div class="m-10 opacity-60">
+            <img
+              class={host.class ? host.class : "h-12"}
+              src={host.logo}
+              alt={host.name}
+            />
+          </div>
+        ))
+      }
     </div>
   </section>
 </Layout>

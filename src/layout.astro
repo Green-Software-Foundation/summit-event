@@ -6,7 +6,7 @@ import "@fontsource/nunito-sans/600.css";
 import "@fontsource/nunito-sans/800.css";
 ---
 
-<html lang="en">
+<html lang="en"  class="scroll-smooth">
   <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8YTE81GCBM"
@@ -15,12 +15,12 @@ import "@fontsource/nunito-sans/800.css";
       // @ts-ignore
       window.dataLayer = window.dataLayer || [];
       function gtag() {
-         // @ts-ignore
+        // @ts-ignore
         dataLayer.push(arguments);
       }
-       // @ts-ignore
+      // @ts-ignore
       gtag("js", new Date());
-       // @ts-ignore
+      // @ts-ignore
       gtag("config", "G-8YTE81GCBM");
     </script>
     <meta charset="utf-8" />
@@ -71,18 +71,16 @@ import "@fontsource/nunito-sans/800.css";
         <Header />
 
         <main><slot /></main>
-        <footer>
-          <div class="mt-28 pb-16 text-center items-center justify-center">
-            <hr class="border-primary-dark w-7/12 m-auto" />
-            <Icon class="mx-auto mt-16 h-14 w-auto" name="footer-logo" />
-            <p class="mt-4 text-primary-light">
-              Privacy Policy | Code of Conduct
-            </p>
-            <p class="text-primary-light mt-2 text-sm">
-              Copyright © {new Date().getFullYear()} Joint Development Foundation
-              Projects, LLC, <br /> Green Software Foundation Series
-            </p>
-          </div>
+        <footer class="py-16 text-center items-center justify-center">
+          <hr class="border-primary-dark w-7/12 m-auto" />
+          <Icon class="mx-auto mt-16 h-14 w-auto" name="footer-logo" />
+          <p class="mt-4 text-primary-light">
+            Privacy Policy | Code of Conduct
+          </p>
+          <p class="text-primary-light mt-2 text-sm">
+            Copyright © {new Date().getFullYear()} Joint Development Foundation
+            Projects, LLC, <br /> Green Software Foundation Series
+          </p>
         </footer>
       </div>
     </div>

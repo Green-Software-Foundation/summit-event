@@ -7,7 +7,7 @@
 <style>
         .logo-icon-globe { fill: #004B76; }
         @media (prefers-color-scheme: dark) {
-            path { fill: #FFF; }
+            .logo-icon-globe { fill: #FFF; }
         }
     </style>
 </svg>
