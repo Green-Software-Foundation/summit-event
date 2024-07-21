@@ -1,0 +1,184 @@
+[
+  {
+    "address": "London",
+    "country": "UK",
+    "countryCode": "GB",
+    "date": "June 7",
+    "time": "1:30 pm BST",
+    "eventType": "Hybrid",
+    "eventLink": "https://www.meetup.com/gsf-london/events/284808203/"
+  },
+  {
+    "address": "N/A",
+    "country": "Europe",
+    "countryCode": "EU",
+    "date": "June 15",
+    "time": "10:00 BST",
+    "eventType": "Virtual",
+    "eventLink": "https://www.meetup.com/gsf-global/events/285147806/"
+  },
+  {
+    "address": "Gurgaon",
+    "country": "India",
+    "countryCode": "IN",
+    "date": "June 10",
+    "time": "09:00 AM IST",
+    "eventType": "Hybrid",
+    "eventLink": "https://www.meetup.com/gsf-gurgaon/events/284807887/"
+  },
+  {
+    "address": "Barcelona",
+    "country": "Spain",
+    "countryCode": "ES",
+    "date": "June 10",
+    "time": "09:30 AM CET",
+    "eventType": "Hybrid",
+    "eventLink": "https://www.meetup.com/gsf-barcelona/events/284807860/"
+  },
+  {
+    "address": "Manchester",
+    "country": "UK",
+    "countryCode": "GB",
+    "date": "June 9",
+    "time": "12:30 PM",
+    "eventType": "Virtual",
+    "eventLink": "https://www.meetup.com/gsf-manchester/events/284807924/"
+  },
+  {
+    "address": "Newcastle",
+    "country": "UK",
+    "countryCode": "GB",
+    "date": "June 9",
+    "time": "12:30 PM",
+    "eventType": "Virtual",
+    "eventLink": "https://www.meetup.com/gsf-newcastle/events/285267038/"
+  },
+  {
+    "address": "Boston",
+    "country": "US",
+    "countryCode": "US",
+    "date": "June 14",
+    "time": "6:00 PM ET",
+    "eventType": "In-person",
+    "eventLink": "https://www.meetup.com/gsf-boston/events/284808223/"
+  },
+  {
+    "address": "Paris",
+    "country": "France",
+    "countryCode": "FR",
+    "date": "June 8",
+    "time": "7:00 PM CET",
+    "eventType": "In-person",
+    "eventLink": "https://www.meetup.com/gsf-paris/events/284808243/"
+  },
+  {
+    "address": "Tokyo",
+    "country": "Japan",
+    "countryCode": "JP",
+    "date": "June 10",
+    "time": "2:00 PM JST",
+    "eventType": "Virtual",
+    "eventLink": "https://www.meetup.com/gsf-tokyo/events/284808254/"
+  },
+  {
+    "address": "Copenhagen",
+    "country": "Denmark",
+    "countryCode": "DK",
+    "date": "June 15",
+    "time": "8:30 AM",
+    "eventType": "In-person",
+    "eventLink": "https://www.meetup.com/gsf-copenhagen/events/284808289/"
+  },
+  {
+    "address": "Hamburg",
+    "country": "Germany",
+    "countryCode": "DE",
+    "date": "June 8",
+    "time": "5:00 PM",
+    "eventType": "In-person",
+    "eventLink": "https://www.meetup.com/gsf-hamburg/events/284807808/"
+  },
+  {
+    "address": "Berlin",
+    "country": "Germany",
+    "countryCode": "DE",
+    "date": "June 9",
+    "time": "5:00 PM",
+    "eventType": "In-person",
+    "eventLink": "https://www.meetup.com/gsf-berlin/events/284807831/"
+  },
+  {
+    "address": "New York",
+    "country": "US",
+    "countryCode": "US",
+    "date": "June 15",
+    "time": "11:00 AM EST",
+    "eventType": "Virtual",
+    "eventLink": "https://www.meetup.com/gsf-newyork/events/284807876/"
+  },
+  {
+    "address": "Milan",
+    "country": "Italy",
+    "countryCode": "IT",
+    "date": "June 9",
+    "time": "8:30 AM CEST",
+    "eventType": "Virtual",
+    "eventLink": "https://www.meetup.com/gsf-milan/events/284808279/"
+  },
+  {
+    "address": "Redmond, WA",
+    "country": "US",
+    "countryCode": "US",
+    "date": "June 14",
+    "time": "9:00 AM PT",
+    "eventType": "Hybrid",
+    "eventLink": "https://www.meetup.com/gsf-redmond/events/284807719/"
+  },
+  {
+    "address": "Houston",
+    "day": 1,
+    "country": "US",
+    "countryCode": "US",
+    "date": "June 15",
+    "time": "10:00 AM CT",
+    "eventType": "Hybrid",
+    "eventLink": "https://www.meetup.com/gsf-houston/events/284808382/"
+  },
+  {
+    "address": "Houston",
+    "day": 2,
+    "country": "US",
+    "countryCode": "US",
+    "date": "June 16",
+    "time": "10:00 AM CT",
+    "eventType": "Hybrid",
+    "eventLink": "https://www.meetup.com/gsf-houston/events/284808364/"
+  },
+  {
+    "address": "Bangalore",
+    "country": "India",
+    "countryCode": "IN",
+    "date": "June 15",
+    "time": "3:00 PM IST",
+    "eventType": "Virtual",
+    "eventLink": "https://www.meetup.com/gsf-bangalore/events/285517794/"
+  },
+  {
+    "address": "Sydney",
+    "country": "Australia",
+    "countryCode": "AU",
+    "date": "June 15",
+    "time": "8:00 AM AET",
+    "eventType": "In-person",
+    "eventLink": "https://www.meetup.com/gsf-sydney/events/284807732/"
+  },
+  {
+    "address": "Shanghai",
+    "country": "China",
+    "countryCode": "CN",
+    "date": "June 16",
+    "time": "11:00 AM BJT",
+    "eventType": "Virtual",
+    "eventLink": "https://www.meetup.com/gsf-shanghai/events/285971505/"
+  }
+]

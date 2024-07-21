@@ -1,0 +1,71 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { address, country, countryCode, date, time, eventType, day } =
+  Astro.props;
+---
+
+<div
+  class="flex flex-col items-center w-full sm:max-w-sm bg-primary-dark rounded-lg hover:-translate-y-2 transition-transform group"
+>
+  <div
+    class="py-4 px-4 mb-2 text-xs font-bold text-white bg-primary-default w-full rounded-t-lg flex justify-between"
+  >
+    <div class="flex items-center">
+      <Icon name="lucide:calendar" />
+      <h5>{date}</h5>
+    </div>
+    <div class="flex items-center">
+      <Icon name="lucide:calendar" />
+
+      <h5>{time}</h5>
+    </div>
+  </div>
+  {
+    countryCode && (
+      <div class="mt-6 mb-3">
+        <div class="w-9 border-2 rounded-sm drop-shadow-md flag-wrapper">
+          <img class="w-full" src={`flags/${countryCode}.svg`} alt={countryCode}/>
+        </div>
+      </div>
+    )
+  }
+  {
+    address && (
+      <h5 class="text-lg font-extrabold text-secondary-default text-center">
+        {address} {day && <small>(Day {day})</small>}
+      </h5>
+    )
+  }
+
+  {
+    country && (
+      <h5 class="text-base font-extrabold text-white text-center">{country}</h5>
+    )
+  }
+  <div class="flex items-center">
+    {
+      (eventType === "In-person" || eventType === "Hybrid") && (
+        <span class="text-secondary-default mr-2">
+          <Icon name="lucide:calendar" />
+        </span>
+      )
+    }
+    {
+      (eventType === "Virtual" || eventType === "Hybrid") && (
+        <span class="text-secondary-default mr-2">
+          <Icon name="lucide:calendar" />
+        </span>
+      )
+    }
+
+    <p class="my-6 text-base font-normal text-white text-center">
+      {eventType} event
+    </p>
+  </div>
+  <div
+    class="inline-flex text-primary-lighter rounded-lg pb-4 group-hover:translate-x-1 transition-transform"
+  >
+    <Icon name="lucide:move-right" />
+  </div>
+</div>

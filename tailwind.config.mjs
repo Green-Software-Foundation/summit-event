@@ -1,7 +1,8 @@
-// tailwind.config.js
-module.exports = {
-  future: {},
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+import defaultTheme from 'tailwindcss/defaultTheme'
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       colors: {
@@ -28,8 +29,10 @@ module.exports = {
         semigap: "0.175em",
         gap: "0.43em",
       },
+      fontFamily: {
+        sans: ['Nunito Sans', ...defaultTheme.fontFamily.sans],
+      },
     },
   },
-  variants: {},
   plugins: [],
-}
+};
