@@ -14,7 +14,7 @@
       {
         "name": "UBS",
         "logo": "/hosts/ubs.svg",
-        "class":"h-14"
+        "height": "3.5rem"
       }
     ]
   },
@@ -29,7 +29,7 @@
       {
         "name": "NTT Data",
         "logo": "/hosts/ntt-data.svg",
-        "class": "h-8"
+        "height": "2rem"
       },
       {
         "name": "Microsoft",
@@ -130,7 +130,7 @@
       {
         "name": "IIM Mumbai",
         "logo": "/hosts/iim-mumbai.png",
-        "class": "w-24"
+        "height": "5rem"
       }
     ]
   },
@@ -227,7 +227,7 @@
       {
         "name": "NTT Data",
         "logo": "/hosts/ntt-data.svg",
-        "class": "h-8"
+        "height": "2rem"
       }
     ]
   }

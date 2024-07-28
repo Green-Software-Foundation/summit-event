@@ -18,7 +18,7 @@ const hosts = regionalEventsData
   .map((organizer) => ({
     logo: organizer.logo,
     name: organizer.name,
-    class: organizer.class,
+    height: organizer.height,
   }))
   .sort((a, b) => a.name.localeCompare(b.name));
 ---
@@ -208,7 +208,8 @@ const hosts = regionalEventsData
         hosts.map((host) => (
           <div class="m-10 opacity-60">
             <img
-              class={host.class ? host.class : "h-10"}
+              style={host.height ? `height: ${host.height}` : ""}
+              class="h-10"
               src={host.logo}
               alt={host.name}
             />
