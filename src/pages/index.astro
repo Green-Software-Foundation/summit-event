@@ -9,20 +9,18 @@ import closingEventsData from "../data/closing-events.json";
 import EventCard from "../components/event-card.astro";
 import SubscribeCard from "../components/subscribe-card.astro";
 
-const hosts = [
-  { logo: "/hosts/accenture.svg", name: "Accenture" },
-  { logo: "/hosts/bcg.svg", name: "BCG X" },
-  { logo: "/hosts/ubs.svg", name: "UBS" },
-  { logo: "/hosts/ntt-data.svg", name: "NTT Data" },
-  { logo: "/hosts/microsoft.svg", name: "Microsoft" },
-  { logo: "/hosts/intel.svg", name: "Intel" },
-  { logo: "/hosts/thoughtworks.svg", name: "Thoughtworks" },
-  { logo: "/hosts/mastercard.svg", name: "Mastercard" },
-  { logo: "/hosts/cast.svg", name: "CAST" },
-  { logo: "/hosts/iim-mumbai.png", name: "IIM Mumbai", class: "w-24" },
-  { logo: "/hosts/imda.svg", name: "IMDA" },
-  { logo: "/hosts/globant.svg", name: "Globant" },
-];
+const hosts = regionalEventsData
+  .flatMap((event) => event.organizers)
+  .filter(
+    (organizer, index, self) =>
+      index === self.findIndex((t) => t.logo === organizer.logo)
+  )
+  .map((organizer) => ({
+    logo: organizer.logo,
+    name: organizer.name,
+    class: organizer.class,
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
 ---
 
 <Layout>
@@ -41,16 +39,14 @@ const hosts = [
           >
         </h1>
         <p class="md:text-md text-primary-light">
-          a series of in-person events held from <strong>
-            October 1-10 2024</strong
-          >, organised by GSF members in partnership with the GSF to captivate,
-          motivate, and foster connections among software practitioners and key
-          stakeholders. This global summit celebrates sustainable software
-          development, maintenance, and improvement.
+          From <strong>October 1-10</strong>, join a series of exciting
+          in-person events hosted by GSF members. This summit brings together
+          software practitioners and key stakeholders, all committed to reducing
+          the environmental impacts of software.
         </p>
         <div class="mt-6 flex gap-x-4 md:mt-8">
           <a href="#events" class="flex gap-2 text-secondary-default"
-            >Discover regional events
+            >Discover events
             <Icon class="w-6 h-auto" name="lucide:arrow-down" />
           </a>
         </div>
@@ -69,12 +65,12 @@ const hosts = [
       <h1
         class="text-secondary-default text-xl md:text-3xl font-extrabold mb-2"
       >
-        Regional{" "}
-        <span class="text-secondary-lightest font-extrabold"> Events </span>
+        Find an Event {" "}
+        <span class="text-secondary-lightest font-extrabold"> Near You </span>
       </h1>
       <p class="md:text-md text-primary-light">
-        Find an event in your city below and be part of this global movement
-        towards greener software!
+        Become part of this global movement towards greener software. Event
+        details will be added as registration links become available.
       </p>
     </div>
     {/* Card component */}
@@ -107,14 +103,11 @@ const hosts = [
         <h2
           class="mb-2 text-xl md:text-3xl font-bold md:mb-6 text-secondary-lightest"
         >
-          Sustainable Software <span class="text-secondary-default"
-            >Expertise and Skills</span
-          >
+          Learn from <span class="text-secondary-default">the Best</span>
         </h2>
         <p class="text-primary-light">
-          Gain valuable insights from experts in the field of sustainable
-          software, develop new skills through workshops and training sessions,
-          and connect with passionate members of the green software community.
+          Gain insights from leading experts in sustainable software engineering
+          and AI.
         </p>
       </div>
       <div class="flex items-center justify-center order-1 md:order-2">
@@ -139,15 +132,33 @@ const hosts = [
         <h2
           class="mb-2 text-xl md:text-3xl font-bold md:mb-6 text-secondary-lightest"
         >
-          Elevate Culture and Accelerate <span class="text-secondary-default"
-            >Green Software Adoption</span
-          >
+          Build Your <span class="text-secondary-default">Network</span>
         </h2>
         <p class="text-primary-light">
-          Share knowledge and exchange information with peers and colleagues to
-          elevate culture, amplify knowledge-sharing, and accelerate the
-          adoption of green software principles, patterns, and tools
+          Connect with climate activists in software and technology.
         </p>
+      </div>
+    </div>
+    <div
+      class="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20 items-center"
+    >
+      <div class="order-2 md:order-2">
+        <h2
+          class="mb-2 text-xl md:text-3xl font-bold md:mb-6 text-secondary-lightest"
+        >
+          Collaborate and <span class="text-secondary-default">Innovate</span>
+        </h2>
+        <p class="text-primary-light">
+          Share knowledge, exchange ideas, and drive the adoption of green
+          software principles, patterns, and tools.
+        </p>
+      </div>
+      <div class="flex items-center justify-center order-1 md:order-2">
+        <img
+          src="/images/info-section-illustration-3.svg"
+          class="w-full object-cover max-w-xs"
+          alt="Placeholder image"
+        />
       </div>
     </div>
   </section>
@@ -197,7 +208,7 @@ const hosts = [
         hosts.map((host) => (
           <div class="m-10 opacity-60">
             <img
-              class={host.class ? host.class : "h-12"}
+              class={host.class ? host.class : "h-10"}
               src={host.logo}
               alt={host.name}
             />

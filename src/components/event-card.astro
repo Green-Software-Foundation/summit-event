@@ -12,12 +12,12 @@ const { address, country, countryCode, date, time, organizers } = Astro.props;
   >
     <div class="flex items-center gap-1">
       <Icon name="lucide:calendar" class="text-secondary-default" />
-      <h5>{date || "tbc"}</h5>
+      <h5>{date || "SOON"}</h5>
     </div>
     <div class="flex items-center gap-1">
       <Icon name="lucide:clock" class="text-secondary-default" />
 
-      <h5>{time || "00:00 GMT"}</h5>
+      <h5>{time || "SOON"}</h5>
     </div>
   </div>
   {
@@ -33,13 +33,10 @@ const { address, country, countryCode, date, time, organizers } = Astro.props;
       </div>
     )
   }
-
-  {
-    country && (
-      <h5 class="text-base font-extrabold text-white text-center">{country}</h5>
-    )
-  }
-    <h5 class="mt-2 text-primary-lighter ">Organized by:</h5>
+  {address && country && (
+    <h5 class="text-base font-extrabold text-white text-center">{`${address}, ${country}`}</h5>
+  )}
+    <h5 class="mt-2 text-primary-lighter">Organized by:</h5>
   <div class="flex items-center justify-center gap-3 mb-2">
     { 
       organizers.map((organizer) => (

@@ -13,7 +13,8 @@
       },
       {
         "name": "UBS",
-        "logo": "/hosts/ubs.svg"
+        "logo": "/hosts/ubs.svg",
+        "class":"h-14"
       }
     ]
   },
@@ -27,7 +28,8 @@
     "organizers": [
       {
         "name": "NTT Data",
-        "logo": "/hosts/ntt-data.svg"
+        "logo": "/hosts/ntt-data.svg",
+        "class": "h-8"
       },
       {
         "name": "Microsoft",
@@ -127,7 +129,8 @@
       },
       {
         "name": "IIM Mumbai",
-        "logo": "/hosts/iim-mumbai.svg"
+        "logo": "/hosts/iim-mumbai.png",
+        "class": "w-24"
       }
     ]
   },
@@ -206,6 +209,25 @@
       {
         "name": "Globant",
         "logo": "/hosts/globant.svg"
+      }
+    ]
+  },
+  {
+    "address": "Munich",
+    "country": "Germany",
+    "countryCode": "DE",
+    "date": "October 1",
+    "time": "",
+    "eventLink": "",
+    "organizers": [
+      {
+        "name": "Siemens AG",
+        "logo": "/hosts/siemens.svg"
+      },
+      {
+        "name": "NTT Data",
+        "logo": "/hosts/ntt-data.svg",
+        "class": "h-8"
       }
     ]
   }
