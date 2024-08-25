@@ -70,21 +70,7 @@
     ]
   },
   {
-    "address": "Helsinki",
-    "country": "Finland",
-    "countryCode": "FI",
-    "date": "October 3",
-    "time": "",
-    "eventLink": "",
-    "organizers": [
-      {
-        "name": "Thoughtworks",
-        "logo": "/hosts/thoughtworks.svg"
-      }
-    ]
-  },
-  {
-    "address": "Barcelona",
+    "address": "Madrid",
     "country": "Spain",
     "countryCode": "ES",
     "date": "October 3",
@@ -228,6 +214,25 @@
         "name": "NTT Data",
         "logo": "/hosts/ntt-data.svg",
         "height": "2rem"
+      },
+      {
+        "name": "CAST",
+        "logo": "/hosts/cast.svg"
+
+      }
+    ]
+  },
+  {
+    "address": "Birmingham",
+    "country": "UK",
+    "countryCode": "GB",
+    "date": "October 2",
+    "time": "2-6pm GMT",
+    "eventLink": "",
+    "organizers": [
+      {
+        "name": "Goldman Sachs",
+        "logo": "/hosts/goldman-sachs.svg"
       }
     ]
   }

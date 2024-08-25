@@ -81,16 +81,15 @@ const hosts = regionalEventsData
             (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
           )
           .map((item) => (
-            <a href={item.eventLink} target="_blank" rel="noreferrer">
-              <EventCard
-                address={item.address}
-                country={item.country}
-                countryCode={item.countryCode}
-                date={item.date}
-                time={item.time}
-                organizers={item.organizers}
-              />
-            </a>
+            <EventCard
+              address={item.address}
+              country={item.country}
+              countryCode={item.countryCode}
+              date={item.date}
+              time={item.time}
+              organizers={item.organizers}
+              link={item.eventLink}
+            />
           ))
       }
     </div>
