@@ -3,69 +3,13 @@
     "address": "London",
     "country": "UK",
     "countryCode": "GB",
-    "date": "",
-    "time": "",
-    "eventLink": "",
+    "date": "October 1",
+    "time": "6pm – 9pm BST",
+    "eventLink": "https://grnsft.org/LondonGlobalSummit2024",
     "organizers": [
       {
         "name": "BCG X",
         "logo": "/hosts/bcg.svg"
-      },
-      {
-        "name": "UBS",
-        "logo": "/hosts/ubs.svg",
-        "height": "3.5rem"
-      }
-    ]
-  },
-  {
-    "address": "Tokyo",
-    "country": "Japan",
-    "countryCode": "JP",
-    "date": "October 4",
-    "time": "",
-    "eventLink": "",
-    "organizers": [
-      {
-        "name": "NTT Data",
-        "logo": "/hosts/ntt-data.svg",
-        "height": "2rem"
-      },
-      {
-        "name": "Microsoft",
-        "logo": "/hosts/microsoft.svg"
-      },
-      {
-        "name": "Intel",
-        "logo": "/hosts/intel.svg"
-      }
-    ]
-  },
-  {
-    "address": "Amsterdam",
-    "country": "Netherlands",
-    "countryCode": "NL",
-    "date": "October 3",
-    "time": "",
-    "eventLink": "",
-    "organizers": [
-      {
-        "name": "Thoughtworks",
-        "logo": "/hosts/thoughtworks.svg"
-      }
-    ]
-  },
-  {
-    "address": "Dublin",
-    "country": "Ireland",
-    "countryCode": "IE",
-    "date": "October 8",
-    "time": "",
-    "eventLink": "",
-    "organizers": [
-      {
-        "name": "Mastercard",
-        "logo": "/hosts/mastercard.svg"
       }
     ]
   },
@@ -73,100 +17,32 @@
     "address": "Madrid",
     "country": "Spain",
     "countryCode": "ES",
-    "date": "October 3",
-    "time": "",
+    "date": "October 10",
+    "time": "Time TBD",
     "eventLink": "",
     "organizers": [
-      {
-        "name": "Thoughtworks Barcelona",
-        "logo": "/hosts/thoughtworks.svg"
-      },
       {
         "name": "CAST",
         "logo": "/hosts/cast.svg"
-      }
-    ]
-  },
-  {
-    "address": "Redmond, WA",
-    "country": "US",
-    "countryCode": "US",
-    "date": "October 9",
-    "time": "",
-    "eventLink": "",
-    "organizers": [
-      {
-        "name": "Microsoft",
-        "logo": "/hosts/microsoft.svg"
-      }
-    ]
-  },
-  {
-    "address": "Mumbai",
-    "country": "India",
-    "countryCode": "IN",
-    "date": "October 10",
-    "time": "",
-    "eventLink": "",
-    "organizers": [
-      {
-        "name": "Accenture",
-        "logo": "/hosts/accenture.svg"
       },
       {
-        "name": "IIM Mumbai",
-        "logo": "/hosts/iim-mumbai.png",
-        "height": "5rem"
+        "name": "NTT Data",
+        "logo": "/hosts/ntt-data.svg",
+        "height": "2rem"
       }
     ]
   },
   {
-    "address": "Hamburg",
-    "country": "Germany",
-    "countryCode": "DE",
-    "date": "October 1",
-    "time": "",
+    "address": "Birmingham",
+    "country": "UK",
+    "countryCode": "GB",
+    "date": "October 2",
+    "time": "2 to 6 pm GMT",
     "eventLink": "",
     "organizers": [
       {
-        "name": "Thoughtworks Hamburg GmbH",
-        "logo": "/hosts/thoughtworks.svg"
-      }
-    ]
-  },
-  {
-    "address": "Berlin",
-    "country": "Germany",
-    "countryCode": "DE",
-    "date": "October 9",
-    "time": "",
-    "eventLink": "",
-    "organizers": [
-      {
-        "name": "Thoughtworks Berlin GmbH",
-        "logo": "/hosts/thoughtworks.svg"
-      }
-    ]
-  },
-  {
-    "address": "Singapore",
-    "country": "Singapore",
-    "countryCode": "SG",
-    "date": "October 10",
-    "time": "",
-    "eventLink": "",
-    "organizers": [
-      {
-        "name": "IMDA",
-        "logo": "/hosts/imda.svg"
-      },
-      {
-        "name": "Accenture",
-        "logo": "/hosts/accenture.svg"
-      },
-      {
-        "name": "Microsoft",
-        "logo": "/hosts/microsoft.svg"
+        "name": "Goldman Sachs",
+        "logo": "/hosts/goldman-sachs.svg"
       }
     ]
   },
@@ -175,7 +51,7 @@
     "country": "Argentina",
     "countryCode": "AR",
     "date": "October 3",
-    "time": "",
+    "time": "10:30am local time",
     "eventLink": "",
     "organizers": [
       {
@@ -188,8 +64,8 @@
     "address": "São Paulo",
     "country": "Brazil",
     "countryCode": "BR",
-    "date": "October 3",
-    "time": "",
+    "date": "October 2",
+    "time": "9am local time",
     "eventLink": "",
     "organizers": [
       {
@@ -199,11 +75,70 @@
     ]
   },
   {
+    "address": "Singapore",
+    "country": "Singapore",
+    "countryCode": "SG",
+    "date": "October 9",
+    "time": "9am local time",
+    "eventLink": "https://grnsft.org/SingaporeGlobalSummit2024",
+    "organizers": [
+      {
+        "name": "IMDA",
+        "logo": "/hosts/imda.svg"
+      },
+      {
+        "name": "IBM",
+        "logo": "/hosts/ibm.svg"
+      },
+      {
+        "name": "Redhat",
+        "logo": "/hosts/redhat.svg"
+      }
+    ]
+  },
+  {
+    "address": "Dublin",
+    "country": "Ireland",
+    "countryCode": "IE",
+    "date": "October 8",
+    "time": "9am local time",
+    "eventLink": "",
+    "organizers": [
+      {
+        "name": "Mastercard",
+        "logo": "/hosts/mastercard.svg"
+      }
+    ]
+  },
+  {
+    "address": "Tokyo",
+    "country": "Japan",
+    "countryCode": "JP",
+    "date": "October 9",
+    "time": "18:00-21:00 JST",
+    "eventLink": "https://grnsft.org/TokyoGlobalSummit2024",
+    "organizers": [
+      {
+        "name": "NTT Data",
+        "logo": "/hosts/ntt-data.svg",
+        "height": "2rem"
+      },
+      {
+        "name": "Microsoft Japan",
+        "logo": "/hosts/microsoft.svg"
+      },
+      {
+        "name": "Intel",
+        "logo": "/hosts/intel.svg"
+      }
+    ]
+  },
+  {
     "address": "Munich",
     "country": "Germany",
     "countryCode": "DE",
     "date": "October 1",
-    "time": "",
+    "time": "1pm CEST",
     "eventLink": "",
     "organizers": [
       {
@@ -214,25 +149,34 @@
         "name": "NTT Data",
         "logo": "/hosts/ntt-data.svg",
         "height": "2rem"
-      },
-      {
-        "name": "CAST",
-        "logo": "/hosts/cast.svg"
-
       }
     ]
   },
   {
-    "address": "Birmingham",
-    "country": "UK",
-    "countryCode": "GB",
-    "date": "October 2",
-    "time": "2-6pm GMT",
-    "eventLink": "",
+    "address": "Hamburg",
+    "country": "Germany",
+    "countryCode": "DE",
+    "date": "October 1",
+    "time": "6-9pm CEST",
+    "eventLink": "https://grnsft.org/HamburgGlobalSummit2024",
     "organizers": [
       {
-        "name": "Goldman Sachs",
-        "logo": "/hosts/goldman-sachs.svg"
+        "name": "Thoughtworks",
+        "logo": "/hosts/thoughtworks.svg"
+      }
+    ]
+  },
+  {
+    "address": "Berlin",
+    "country": "Germany",
+    "countryCode": "DE",
+    "date": "October 9",
+    "time": "6-9pm CEST",
+    "eventLink": "https://grnsft.org/BerlinGlobalSummit2024",
+    "organizers": [
+      {
+        "name": "Thoughtworks",
+        "logo": "/hosts/thoughtworks.svg"
       }
     ]
   }
