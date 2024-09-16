@@ -26,7 +26,7 @@
         "logo": "/hosts/cast.svg"
       },
       {
-        "name": "NTT Data",
+        "name": "NTT DATA",
         "logo": "/hosts/ntt-data.svg",
         "height": "2rem"
       }
@@ -119,7 +119,7 @@
     "eventLink": "https://grnsft.org/TokyoGlobalSummit2024",
     "organizers": [
       {
-        "name": "NTT Data",
+        "name": "NTT DATA",
         "logo": "/hosts/ntt-data.svg",
         "height": "2rem"
       },
@@ -139,16 +139,20 @@
     "countryCode": "DE",
     "date": "October 1",
     "time": "1pm CEST",
-    "eventLink": "",
+    "eventLink": "https://grnsft.org/MunichGlobalSummit2024",
     "organizers": [
       {
         "name": "Siemens AG",
         "logo": "/hosts/siemens.svg"
       },
       {
-        "name": "NTT Data",
+        "name": "NTT DATA",
         "logo": "/hosts/ntt-data.svg",
         "height": "2rem"
+      },
+      {
+        "name": "CAST",
+        "logo": "/hosts/cast.svg"
       }
     ]
   },
