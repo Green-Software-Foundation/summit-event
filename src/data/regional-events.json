@@ -19,7 +19,7 @@
     "countryCode": "ES",
     "date": "October 10",
     "time": "Time TBD",
-    "eventLink": "",
+    "eventLink": "https://grnsft.org/MadridGlobalSummit2024",
     "organizers": [
       {
         "name": "CAST",
@@ -85,14 +85,6 @@
       {
         "name": "IMDA",
         "logo": "/hosts/imda.svg"
-      },
-      {
-        "name": "IBM",
-        "logo": "/hosts/ibm.svg"
-      },
-      {
-        "name": "Redhat",
-        "logo": "/hosts/redhat.svg"
       }
     ]
   },
@@ -102,7 +94,7 @@
     "countryCode": "IE",
     "date": "October 8",
     "time": "9am local time",
-    "eventLink": "",
+    "eventLink": "https://grnsft.org/DublinGlobalSummit2024",
     "organizers": [
       {
         "name": "Mastercard",
